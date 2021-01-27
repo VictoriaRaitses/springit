@@ -1,5 +1,6 @@
 package com.vika.springit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,7 +19,8 @@ public class Comment extends Auditable{
     @NonNull
     private String body;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
     @NonNull
     private Link link;
 

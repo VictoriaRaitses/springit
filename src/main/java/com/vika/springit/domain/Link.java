@@ -1,5 +1,6 @@
 package com.vika.springit.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.*;
 
