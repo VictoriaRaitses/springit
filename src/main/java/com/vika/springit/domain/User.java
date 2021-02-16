@@ -35,6 +35,10 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private boolean enabled;
 
+
+    // users
+    // roles
+    //users_roles
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "users_roles",
@@ -77,6 +81,6 @@ public class User implements UserDetails {
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 }
