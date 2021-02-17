@@ -28,6 +28,7 @@
                 <time th:title="${link.getCreationDate()}" th:datetime="${link.getCreationDate()}"
                       class="live-timestamp" th:text="${link.getPrettyTime()}">1 hour(s)
                 </time>
+                <a href="/" class="author" th:text="${link.createdBy}">victoriaraitses</a>
             </p>
             <p>
                 <a th:href="@{'/link/' + ${link.id} + '#comments'}" class="comments"
